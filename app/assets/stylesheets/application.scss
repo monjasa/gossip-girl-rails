@@ -15,3 +15,36 @@
  */
 
 @import "bulma";
+
+.navbar {
+  padding: 0 2em;
+}
+
+.is-info {
+  background-color: #ff93ed !important;
+}
+
+.is-inverted {
+  color: #ff93ed !important;
+  background-color: white !important;
+}
+
+.field {
+  align-items: center;
+
+}
+
+.navbar-brand .title {
+  color: white;
+}
+
+.image {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.notifications:not(:last-child) {
+  margin-bottom: 0;
+}

@@ -14,17 +14,22 @@ ru:
         email: 'Адрес электронной почты'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+        remember_me: 'Запомнить меня'
+      tweet:
+        message: "О чём посплетничаем сегодня?"
     hints:
       user:
         username: 'Твои подруги запомнят тебя по этому имени!'
-        password: 'Пароль должен состоять минимум из %{min_length} символов.'
+        password_min_length: 'Пароль должен состоять минимум из %{min_length} символов.'
     placeholders:
       user:
         name: 'Агата Кристи'
-        username: '_christie19_'
+        username: 'christie19'
         email: 'agathachristie1890@gmail.com'
         password: '******'
         password_confirmation: '******'
+      tweet:
+        message: "Расскажи об этом немедленно!"
     include_blanks:
       user:
         age: 'Предпочту оставить в тайне'

@@ -4,7 +4,7 @@
 
       <div class="column is-4">
 
-        <h2 class="title is-2">Log in</h2>
+        <h2 class="title is-2"><%= t '.title' %></h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -39,7 +39,7 @@
 
           <div class="field">
             <div class="control">
-              <%= f.button :submit, "Log in", class: "button is-info is-medium" %>
+              <%= f.button :submit, t('.submit'), class: "button is-info is-medium" %>
             </div>
           </div>
         <% end %>

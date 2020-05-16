@@ -44,7 +44,7 @@
             <div class="control">
               <%= f.input :password,
                           required: true,
-                          hint: (t 'simple_form.hints.user.password', min_length: @minimum_password_length),
+                          hint: t('simple_form.hints.user.password_min_length', min_length: @minimum_password_length),
                           input_html: {class: "input", autocomplete: "new-password"},
                           wrapper: false,
                           label_html: {class: "label"} %>
@@ -63,7 +63,7 @@
 
           <div class="field">
             <div class="control">
-              <%= f.button :submit, (t '.submit'), class: "button is-info is-medium" %>
+              <%= f.button :submit, t('.submit'), class: "button is-info is-medium" %>
             </div>
           </div>
         <% end %>

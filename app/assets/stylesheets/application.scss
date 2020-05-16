@@ -14,37 +14,59 @@
  *= require_self
  */
 
+$info: #ff93ed;
+
 @import "bulma";
 
+.notification{
+  border-radius: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 .navbar {
-  padding: 0 2em;
-}
+  height: 5em;
 
-.is-info {
-  background-color: #ff93ed !important;
-}
+  .navbar-brand {
+    height: 100%;
+    align-items: center;
 
-.is-inverted {
-  color: #ff93ed !important;
-  background-color: white !important;
+    .navbar-item {
+      height: 100%;
+      text-align: center;
+
+      h1 {
+        width: 10em;
+        color: white;
+      }
+    }
+  }
+
+  .navbar-end {
+    padding-right: 2em;
+
+    .control {
+      margin: 0 1em;
+    }
+  }
 }
 
 .field {
   align-items: center;
-
-}
-
-.navbar-brand .title {
-  color: white;
 }
 
 .image {
   border-radius: 50%;
+
   img {
     border-radius: 50%;
   }
 }
 
-.notification:not(:last-child) {
-  margin-bottom: 0;
+.level {
+  a {
+    color: $info;
+  }
 }

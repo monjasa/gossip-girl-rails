@@ -1,7 +1,21 @@
 en:
-  hello: "Hello world!"
   layouts:
     application:
       title: "Gossip Girl"
-      new: "Spread Gossips"
+      new: "Sign In"
       sign_up: "Sign Up"
+  tweets:
+    following:
+      gossipmongers: "Gossipmongers"
+    hot:
+      title: "Juicy Gossips"
+    form:
+      submit: "Spread a Gossip"
+    create:
+      notice: "The gossip was successfully spread."
+    destroy:
+      notice: "The gossip was successfully destroyed."
+    update:
+      notice: "The gossip was successfully updated."
+    feed:
+      delete_confirm: "Are you sure you want to delete this gossip?"

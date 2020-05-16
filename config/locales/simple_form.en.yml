@@ -14,17 +14,22 @@ en:
         email: 'Email Address'
         password: 'Password'
         password_confirmation: 'Password Confirmation'
+        remember_me: 'Remember me'
+      tweet:
+        message: "What are we going to gossip about?"
     hints:
       user:
         username: 'You''ll become popular with this username!'
-        password: 'Password must be at least %{min_length} characters long.'
+        password_min_length: 'Password must be at least %{min_length} characters long.'
     placeholders:
       user:
         name: 'Agatha Christie'
-        username: '_christie19_'
+        username: 'christie19'
         email: 'agathachristie1890@gmail.com'
         password: '********'
         password_confirmation: '********'
+      tweet:
+        message: "Tell everything about it right away!"
     include_blanks:
       user:
         age: 'Rather not say'

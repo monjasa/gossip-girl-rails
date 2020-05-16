@@ -1,7 +1,21 @@
 ru:
-  hello: "Привет, мир!"
   layouts:
     application:
       title: "Сплетница"
-      new: "Посплетничать"
+      new: "Вход"
       sign_up: "Регистрация"
+  tweets:
+    following:
+      gossipmongers: "Сплетники"
+    hot:
+      title: "Горячие сплетни"
+    form:
+      submit: "Пустить сплетни"
+    create:
+      notice: "Сплетни были успешно добавлены."
+    destroy:
+      notice: "Сплетни были успешно стёрты."
+    update:
+      notice: "Сплетни были успешно обновлены."
+    feed:
+      delete_confirm: "Ты действительно хочешь стереть эти сплетни?"

@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_05_15_170900) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "tweets", force: :cascade do |t|
     t.text "message"
     t.datetime "created_at", precision: 6, null: false

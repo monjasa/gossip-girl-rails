@@ -1,0 +1,7 @@
+ru:
+  hello: "Привет, мир!"
+  layouts:
+    application:
+      title: "Сплетница"
+      new: "Посплетничать"
+      sign_up: "Регистрация"

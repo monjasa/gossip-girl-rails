@@ -247,6 +247,7 @@ DEPENDENCIES
   devise (~> 4.7, >= 4.7.1)
   gravatar_image_tag (~> 1.2)
   guard (~> 2.16, >= 2.16.2)
+  i18n (~> 1.8, >= 1.8.2)
   jbuilder (~> 2.7)
   pg (~> 1.2, >= 1.2.3)
   puma (~> 4.1)

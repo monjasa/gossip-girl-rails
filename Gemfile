@@ -31,10 +31,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bulma-rails', '~> 0.8.0'
 # Forms made easy!
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
-# A configurable and documented Rails view helper for adding gravatars into your Rails application.
+# A configurable and documented Rails view helper for adding gravatars into your Rails application
 gem 'gravatar_image_tag', '~> 1.2'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.7', '>= 4.7.1'
+# New wave Internationalization support for Ruby
+gem 'i18n', '~> 1.8', '>= 1.8.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,7 +44,7 @@ group :development, :test do
 end
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code
   gem 'web-console', '>= 3.3.0'
   # Provides a better error page for Rails and other Rack apps
   gem 'better_errors', '~> 2.7', '>= 2.7.1'

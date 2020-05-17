@@ -1,9 +1,13 @@
 ru:
+  en: "English"
+  ru: "Русский"
   layouts:
     application:
       title: "Сплетница"
       new: "Вход"
       sign_up: "Регистрация"
+      sign_out: "Выйти"
+      locale: "Язык"
   tweets:
     following:
       gossipmongers: "Сплетники"

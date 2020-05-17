@@ -33,9 +33,9 @@
         <% end %>
 
         <div class="navbar-burger burger" data-target="navbar-example">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
         </div>
       </div>
 
@@ -48,10 +48,34 @@
             <p class="control">
               <%= link_to t('.sign_up'), new_user_registration_path, class: "has-text-white" %>
             </p>
+            <p>
+              <%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete, class: "has-text-white" %>
+            </p>
           </div>
         </div>
       </div>
     </nav>
+
+    <div>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <span><%= t '.locale' %></span>
+            <span class="icon is-small">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </span>
+          </button>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <% alternate_locales do |locale| %>
+              <div class="language <%= locale %>"> <%= link_to t(locale), root_path(locale: locale), class: "dropdown-item" %></div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <%= yield %>
   </body>

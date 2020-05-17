@@ -1,9 +1,13 @@
 en:
+  en: "English"
+  ru: "Русский"
   layouts:
     application:
       title: "Gossip Girl"
       new: "Sign In"
       sign_up: "Sign Up"
+      sign_out: "Sign Out"
+      locale: "Language"
   tweets:
     following:
       gossipmongers: "Gossipmongers"

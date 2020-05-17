@@ -4,8 +4,9 @@ ru:
   layouts:
     application:
       title: "Сплетница"
-      new: "Вход"
+      new: "Посплетничать"
       sign_up: "Регистрация"
+      sign_in: "Вход"
       sign_out: "Выйти"
       locale: "Язык"
   tweets:
@@ -23,3 +24,16 @@ ru:
       notice: "Сплетни были успешно обновлены."
     feed:
       delete_confirm: "Ты действительно хочешь стереть эти сплетни?"
+      title: "Самые свежие сплетни"
+    profile_description:
+      tweets_count: "Сплетни"
+      followers_count: "Подписчики"
+      following_count: "Подписки"
+      title: "Аккаунт"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: "Текущий пароль не может быть пустым!"

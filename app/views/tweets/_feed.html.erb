@@ -1,15 +1,19 @@
 <div class="column is-half">
-  <article class="media box">
-    <figure class="media-left">
-      <p class="image is-64x64">
-        <img src="https://instagram.fiev4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/74395677_1228793160662496_5969088364786221056_n.jpg?_nc_ht=instagram.fiev4-1.fna.fbcdn.net&_nc_ohc=rM28fUYCfZsAX-wiK2t&oh=11f624d8a86c98276b59a2ad89d28c32&oe=5EE78019">
-      </p>
-    </figure>
-    <div class="media-content">
-      <%= render 'tweets/form' %>
-    </div>
-  </article>
 
+  <% if user_signed_in? %>
+    <article class="media box">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+        </p>
+      </figure>
+      <div class="media-content">
+        <%= render 'tweets/form' %>
+      </div>
+    </article>
+  <% end %>
+
+  <h3 class="title is-3 pt-5"><%= t '.title' %></h3>
 
   <% @tweets.each do |tweet| %>
     <div class="box">
@@ -21,23 +25,24 @@
       </figure>
       <div class="media-content">
         <div class="content">
-          <strong>Артур Кашапов</strong>
-          <small>@monja.nya</small>
+          <strong><%= tweet.user.name %></strong>
+          <small>@<%= tweet.user.username %></small>
           <p><%= tweet.message %></p>
         </div>
-        <nav class="level">
-          <div class="level-left is-mobile">
-            <%= link_to tweet do %>
-              <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-            <% end %>
-            <%= link_to edit_tweet_path(tweet) do %>
-              <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-            <% end %>
-            <%= link_to tweet, method: :delete, data: { confirm: t('.delete_confirm') } do %>
-              <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-            <% end %>
-          </div>
-        </nav>
+
+        <% if user_signed_in? && current_user.id == tweet.user.id %>
+          <nav class="level">
+            <div class="level-left is-mobile">
+              <%= link_to edit_tweet_path(tweet) do %>
+                <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+              <% end %>
+              <%= link_to tweet, method: :delete, data: { confirm: t('.delete_confirm') } do %>
+                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+              <% end %>
+            </div>
+          </nav>
+        <% end %>
+
       </div>
       </article>
     </div>

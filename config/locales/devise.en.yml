@@ -51,6 +51,9 @@ en:
       new:
         title: "Sign Up"
         submit: "Continue"
+      edit:
+        title: "Edit Account"
+        submit: "Save"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
@@ -67,6 +70,8 @@ en:
         sign_in: "Log in"
         sign_up: "Sign Up"
         password_forgotten: "Forgot your password?"
+    form:
+      back: "Back"
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"
@@ -77,3 +82,9 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  tweets:
+    edit:
+      title: "Editing Gossip"
+    back: "Cancel"
+    new:
+      title: "New Gossip"

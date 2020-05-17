@@ -33,24 +33,36 @@
         <% end %>
 
         <div class="navbar-burger burger" data-target="navbar-example">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
 
       <div id="navbar-example" class="navbar-menu">
         <div class="navbar-end">
           <div class="field is-grouped">
+
             <p class="control">
-              <%= link_to t('.new'), new_user_session_path, class: "button is-info is-inverted" %>
+              <%= link_to t('.new'), user_signed_in? ? root_path : new_tweet_path, class: "button is-info is-inverted" %>
             </p>
-            <p class="control">
-              <%= link_to t('.sign_up'), new_user_registration_path, class: "has-text-white" %>
-            </p>
-            <p>
-              <%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete, class: "has-text-white" %>
-            </p>
+
+            <% if user_signed_in? %>
+              <p>
+                <%= link_to current_user.name, edit_user_registration_path, class: "button is-info" %>
+              </p>
+              <p>
+                <%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete, class: "button is-info" %>
+              </p>
+
+            <% else %>
+              <p class="control">
+                <%= link_to t('.sign_in'), new_user_session_path, class: "button is-info" %>
+              </p>
+              <p class="control">
+                <%= link_to t('.sign_up'), new_user_registration_path, class: "button is-info" %>
+              </p>
+            <% end %>
           </div>
         </div>
       </div>

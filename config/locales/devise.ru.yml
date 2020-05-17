@@ -52,6 +52,9 @@ ru:
       new:
         title: "Регистрация"
         submit: "Зарегистрироваться"
+      edit:
+        title: "Редактировать аккаунт"
+        submit: "Сохранить"
     sessions:
       signed_in: "Вход в систему выполнен."
       signed_out: "Выход из системы выполнен."
@@ -68,6 +71,8 @@ ru:
         sign_in: "Вход"
         sign_up: "Регистрация"
         password_forgotten: "Забыли пароль?"
+    form:
+      back: "Вернуться"
   errors:
     messages:
       already_confirmed: "уже подтверждена. Пожалуйста, попробуйте войти в систему"
@@ -80,3 +85,9 @@ ru:
         few: "%{resource}: сохранение не удалось из-за %{count} ошибок"
         many: "%{resource}: сохранение не удалось из-за %{count} ошибок"
         other: "%{resource}: сохранение не удалось из-за %{count} ошибки"
+  tweets:
+    edit:
+      title: "Редактирование сплетней"
+    back: "Отменить"
+    new:
+      title: "Новые сплетни"

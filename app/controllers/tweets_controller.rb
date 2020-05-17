@@ -12,6 +12,7 @@ class TweetsController < ApplicationController
   # GET /tweets/1
   # GET /tweets/1.json
   def show
+    redirect_to root_path
   end
 
   # GET /tweets/new

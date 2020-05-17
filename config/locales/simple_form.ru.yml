@@ -14,13 +14,16 @@ ru:
         email: 'Адрес электронной почты'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+        current_password: 'Текущий пароль'
         remember_me: 'Запомнить меня'
       tweet:
         message: "О чём посплетничаем сегодня?"
     hints:
       user:
         username: 'Твои подруги запомнят тебя по этому имени!'
+        current_password: 'Чтобы подтвердить изменения, введи текущий пароль.'
         password_min_length: 'Пароль должен состоять минимум из %{min_length} символов.'
+        password_not_required: 'Оставь поле пустым, если не хочешь менять пароль.'
     placeholders:
       user:
         name: 'Агата Кристи'

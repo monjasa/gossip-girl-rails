@@ -1,0 +1,42 @@
+<nav class="panel">
+  <p class="panel-heading"><%= t '.title' %></p>
+  <div class="panel-block">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="https://instagram.fiev4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/74395677_1228793160662496_5969088364786221056_n.jpg?_nc_ht=instagram.fiev4-1.fna.fbcdn.net&_nc_ohc=rM28fUYCfZsAX-wiK2t&oh=11f624d8a86c98276b59a2ad89d28c32&oe=5EE78019">
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong><%= current_user.name %></strong><br/>
+            <small>@<%= current_user.username %></small>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="panel-block">
+    <div class="level is-mobile">
+      <div class="level-item has-centered-text">
+        <div>
+          <p class="heading"><%= t '.tweets_count' %></p>
+          <p class="title is-6"><%= current_user.tweets.count %></p>
+        </div>
+      </div>
+      <div class="level-item has-centered-text">
+        <div>
+          <p class="heading"><%= t '.following_count' %></p>
+          <p class="title is-6">12</p>
+        </div>
+      </div>
+      <div class="level-item has-centered-text">
+        <div>
+          <p class="heading"><%= t '.followers_count' %></p>
+          <p class="title is-6">142</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

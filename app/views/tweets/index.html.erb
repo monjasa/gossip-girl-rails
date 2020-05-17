@@ -1,7 +1,15 @@
 <section class="section">
   <div class="container">
     <div id="main" class="columns">
-      <%= render 'hot' %>
+
+      <div class="column is-one-quarter">
+        <% if user_signed_in? %>
+          <%= render 'profile_description' %>
+        <% end %>
+        <%= render 'hot' %>
+      </div>
+
+
       <%= render 'feed' %>
       <%= render 'following' %>
     </div>

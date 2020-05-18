@@ -55,6 +55,7 @@ ru:
       edit:
         title: "Редактировать аккаунт"
         submit: "Сохранить"
+        update_avatar: "Загрузить аватар"
     sessions:
       signed_in: "Вход в систему выполнен."
       signed_out: "Выход из системы выполнен."

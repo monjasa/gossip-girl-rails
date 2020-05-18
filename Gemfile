@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -39,6 +39,8 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'i18n', '~> 1.8', '>= 1.8.2'
 # This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application.
 gem 'jquery-rails', '~> 4.4'
+# Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3)
+gem 'aws-sdk-s3', '~> 1.64', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

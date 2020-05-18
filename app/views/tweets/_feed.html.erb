@@ -4,7 +4,7 @@
     <article class="media box">
       <figure class="media-left">
         <p class="image is-64x64">
-          <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+          <%= user_avatar_tag current_user %>
         </p>
       </figure>
       <div class="media-content">
@@ -20,13 +20,13 @@
       <article class="media">
       <figure class="media-left">
         <p class="image is-64x64">
-          <img src="https://instagram.fiev4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/74395677_1228793160662496_5969088364786221056_n.jpg?_nc_ht=instagram.fiev4-1.fna.fbcdn.net&_nc_ohc=rM28fUYCfZsAX-wiK2t&oh=11f624d8a86c98276b59a2ad89d28c32&oe=5EE78019">
+          <%= user_avatar_tag tweet.user %>
         </p>
       </figure>
       <div class="media-content">
         <div class="content">
           <strong><%= tweet.user.name %></strong>
-          <small>@<%= tweet.user.username %></small>
+          <small><%= at_username tweet.user %></small>
           <p><%= tweet.message %></p>
         </div>
 

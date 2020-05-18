@@ -2,77 +2,25 @@
   <nav class="panel">
     <p class="panel-heading"><%= t '.gossipmongers' %></p>
 
-
-    <div class="panel-block">
-      <article class="media">
-        <figure class="media-left">
-          <p class="image is-32x32">
-            <img src="https://instagram.fiev4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/74395677_1228793160662496_5969088364786221056_n.jpg?_nc_ht=instagram.fiev4-1.fna.fbcdn.net&_nc_ohc=rM28fUYCfZsAX-wiK2t&oh=11f624d8a86c98276b59a2ad89d28c32&oe=5EE78019">
-          </p>
-        </figure>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>Артур Кашапов</strong>
-              <small>@monja.nya</small>
+    <% @users.each do |user| %>
+      <div class="panel-block">
+        <article class="media">
+          <figure class="media-left">
+            <p class="image is-32x32">
+              <%= user_avatar_tag user %>
             </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong><%= user.name %></strong>
+                <small><%= at_username user %></small>
+              </p>
+            </div>
           </div>
-        </div>
-      </article>
-    </div>
+        </article>
+      </div>
+    <% end %>
 
-    <div class="panel-block">
-      <article class="media">
-        <figure class="media-left">
-          <p class="image is-32x32">
-            <img src="https://instagram.fiev4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/70888744_393426641355232_601296787239600128_n.jpg?_nc_ht=instagram.fiev4-1.fna.fbcdn.net&_nc_ohc=-LkxTX_Bs3UAX9KHXPA&oh=a9f959503ddf69ce89855b4eeddfeaab&oe=5EE79F74">
-          </p>
-        </figure>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>Юля Телятинська</strong>
-              <small>@yuliia_t</small>
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="panel-block">
-      <article class="media">
-        <figure class="media-left">
-          <p class="image is-32x32">
-            <img src="https://instagram.fiev4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/72213203_418498462185944_2929355111064928256_n.jpg?_nc_ht=instagram.fiev4-1.fna.fbcdn.net&_nc_ohc=wcgrN5kbrrsAX-1yBmt&oh=012bf16e5b92c2737ac0fd55914912a0&oe=5EE6E780">
-          </p>
-        </figure>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>Алина Шумилова</strong>
-              <small>@milkaalinka18</small>
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="panel-block">
-      <article class="media">
-        <figure class="media-left">
-          <p class="image is-32x32">
-            <img src="https://instagram.fiev4-1.fna.fbcdn.net/v/t51.2885-19/s320x320/70912371_526743011460304_7703666415433154560_n.jpg?_nc_ht=instagram.fiev4-1.fna.fbcdn.net&_nc_ohc=JM2R70LE4SkAX8y_Gy4&oh=4d52487a2e4dfcab10a03ec5275f62de&oe=5EE6BFAB">
-          </p>
-        </figure>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>Антон Голда</strong>
-              <small>@a._golda</small>
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
   </nav>
 </div>

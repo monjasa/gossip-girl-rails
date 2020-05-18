@@ -3,4 +3,13 @@ export function init() {
         event.stopPropagation();
         $('.dropdown').toggleClass('is-active');
     });
+
+    $('#user_avatar').change(() => {
+        $('#edit_account').click();
+    });
+
+    $('#avatar-upload-btn').click(function(event) {
+        $('#user_avatar').click();
+    });
+
 }

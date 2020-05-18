@@ -19,6 +19,6 @@ require("jquery")
 
 import * as application_controller from "../controllers/application_controller"
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
     application_controller.init()
 })

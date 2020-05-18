@@ -34,10 +34,10 @@
           <nav class="level">
             <div class="level-left is-mobile">
               <%= link_to edit_tweet_path(tweet) do %>
-                <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
               <% end %>
               <%= link_to tweet, method: :delete, data: { confirm: t('.delete_confirm') } do %>
-                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
               <% end %>
             </div>
           </nav>

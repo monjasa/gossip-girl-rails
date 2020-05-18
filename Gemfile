@@ -41,6 +41,10 @@ gem 'i18n', '~> 1.8', '>= 1.8.2'
 gem 'jquery-rails', '~> 4.4'
 # Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3)
 gem 'aws-sdk-s3', '~> 1.64', require: false
+# Use world flag icons in your Rails app
+gem 'world-flags', '~> 0.6.6'
+# Countries and languages in I18n.locale for select_tag or output in 85 languages
+gem 'countries_and_languages', '~> 0.2.0', :require => 'countries_and_languages/rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

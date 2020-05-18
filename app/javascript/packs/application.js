@@ -20,5 +20,10 @@ require("jquery")
 import * as application_controller from "../controllers/application_controller"
 
 $(document).on('turbolinks:load', function() {
+
+    $(".notification").delay(2000).slideUp(500, function(){
+        $(".notification").alert('close');
+    });
+
     application_controller.init()
 })

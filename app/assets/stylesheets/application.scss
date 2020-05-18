@@ -12,9 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require flags/basic
+ *= require flags/flags16
+ *= require flags/flags32
  */
 
-$info: #D95FA2;
+$info: #d95fa2;
+$primary: #d95098;
 $white: #fdfdfd;
 
 @import "bulma";
@@ -38,23 +42,33 @@ $white: #fdfdfd;
     height: 100%;
     align-items: center;
 
+    .navbar-burger {
+      height: 100%;
+    }
+
     .navbar-item {
       height: 100%;
       text-align: center;
+      padding: 0 2em;
 
       h1 {
-        width: 10em;
         color: white;
       }
     }
   }
 
-  .navbar-end {
-    padding-right: 2em;
+  .navbar-menu {
+    background-color: $info;
+  }
+}
 
-    .control {
-      margin: 0 1em;
-    }
+.f32 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .flag {
+    margin: auto 0.5em;
   }
 }
 
@@ -83,5 +97,26 @@ $white: #fdfdfd;
 
   p {
     margin-top: 0.5em;
+  }
+}
+
+@include until($desktop) {
+  .navbar-menu {
+    display: block;
+    opacity: 0;
+
+    position: absolute;   /* or float: left; width: 100%;*/
+    left: 0;
+    right: 0;
+
+    transform: translateY(-50%);
+    transition: all .4s ease-in-out;
+    pointer-events: none;
+  }
+
+  .navbar-menu.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
 }

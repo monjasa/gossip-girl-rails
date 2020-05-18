@@ -55,6 +55,7 @@ en:
         title: "Edit Account"
         submit: "Save"
         update_avatar: "Change your avatar"
+        back: "Back"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."

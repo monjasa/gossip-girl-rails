@@ -18,8 +18,9 @@
  */
 
 $info: #d95fa2;
-$primary: #d95098;
+$primary: #58BF54;
 $white: #fdfdfd;
+$danger: #F05D65;
 
 @import "bulma";
 
@@ -87,7 +88,13 @@ $white: #fdfdfd;
 .level {
   a {
     color: $info;
+    margin-right: 0.75em;
   }
+}
+
+.buttons-level {
+  display: flex;
+  justify-content: space-between;
 }
 
 #avatar-upload-btn {

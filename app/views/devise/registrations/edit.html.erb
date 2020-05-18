@@ -84,10 +84,17 @@
                 </div>
               </div>
 
-              <div class="field">
+              <div class="buttons-level field">
                 <div class="control">
                   <%= f.button :submit, t('.submit'), class: "button is-info is-medium", id: :edit_account %>
                 </div>
+                <div class="control">
+                  <%= link_to t('.back'), tweets_path, class: "button is-dark is-medium" %>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+
               </div>
 
             </div>

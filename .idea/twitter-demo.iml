@@ -66,6 +66,7 @@
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.10.0, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jmespath (v1.4.0, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.4.0, ruby-2.6.6-p146) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v2.3.0, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.2.1, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.5.0, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="lumberjack (v1.2.4, ruby-2.6.6-p146) [gem]" level="application" />
@@ -93,6 +94,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rails (v6.0.3, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.3.0, ruby-2.6.6-p146) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_real_favicon (v0.1.0, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v6.0.3, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.1, ruby-2.6.6-p146) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.10.4, ruby-2.6.6-p146) [gem]" level="application" />

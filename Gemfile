@@ -58,6 +58,8 @@ group :development do
   gem 'better_errors', '~> 2.7', '>= 2.7.1'
   # Guard is a command line tool to easily handle events on file system modifications
   gem 'guard', '~> 2.16', '>= 2.16.2'
+  # Generate and install a favicon for all platforms with RealFaviconGenerator
+  gem 'rails_real_favicon', '~> 0.1.0'
 end
 
 group :test do

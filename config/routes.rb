@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tags
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     resources :gossips do
       resources :comments
@@ -9,5 +10,4 @@ Rails.application.routes.draw do
   end
 
   root to: redirect("/ru"), as: :redirected_root
-
 end

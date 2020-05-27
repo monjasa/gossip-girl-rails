@@ -19,7 +19,7 @@
                   <%= user_avatar_tag(current_user, 128) %>
                 </figure>
 
-                <p>
+                <p class="mt20">
                   <i class="fa fa-camera" aria-hidden="true"></i>
                   <strong><%= t '.update_avatar' %></strong>
                 </p>
@@ -89,7 +89,7 @@
                   <%= f.button :submit, t('.submit'), class: "button is-info is-medium", id: :edit_account %>
                 </div>
                 <div class="control">
-                  <%= link_to t('.back'), tweets_path, class: "button is-dark is-medium" %>
+                  <%= link_to t('.back'), gossips_path, class: "button is-dark is-medium" %>
                 </div>
               </div>
 

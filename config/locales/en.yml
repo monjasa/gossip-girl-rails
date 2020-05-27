@@ -4,16 +4,16 @@ en:
   layouts:
     application:
       title: "Gossip Girl"
-      new: "Spread Gossips"
+      new: "Spread gossips"
       sign_up: "Sign Up"
       sign_out: "Sign Out"
       locale: "Language"
       sign_in: "Sign In"
-  tweets:
+  gossips:
     following:
       gossipmongers: "Gossipmongers"
     hot:
-      title: "Juicy Gossips"
+      title: "Juicy gossips"
     form:
       submit: "Spread a Gossip"
     create:
@@ -24,9 +24,9 @@ en:
       notice: "The gossip was successfully updated."
     feed:
       delete_confirm: "Are you sure you want to delete this gossip?"
-      title: "Latest Gossips"
+      title: "Latest gossips"
     profile_description:
-      tweets_count: "Gossips"
+      tweets_count: "gossips"
       followers_count: "Followers"
       following_count: "Following"
       title: "Profile"

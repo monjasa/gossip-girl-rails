@@ -2,42 +2,42 @@ require "application_system_test_case"
 
 class TweetsTest < ApplicationSystemTestCase
   setup do
-    @tweet = tweets(:one)
+    @gossip = tweets(:one)
   end
 
   test "visiting the index" do
-    visit tweets_url
+    visit gossips_url
     assert_selector "h1", text: "Tweets"
   end
 
-  test "creating a Tweet" do
-    visit tweets_url
-    click_on "New Tweet"
+  test "creating a Gossip" do
+    visit gossips_url
+    click_on "New Gossip"
 
-    fill_in "Message", with: @tweet.message
-    click_on "Create Tweet"
+    fill_in "Message", with: @gossip.message
+    click_on "Create Gossip"
 
-    assert_text "Tweet was successfully created"
+    assert_text "Gossip was successfully created"
     click_on "Back"
   end
 
-  test "updating a Tweet" do
-    visit tweets_url
+  test "updating a Gossip" do
+    visit gossips_url
     click_on "Edit", match: :first
 
-    fill_in "Message", with: @tweet.message
-    click_on "Update Tweet"
+    fill_in "Message", with: @gossip.message
+    click_on "Update Gossip"
 
-    assert_text "Tweet was successfully updated"
+    assert_text "Gossip was successfully updated"
     click_on "Back"
   end
 
-  test "destroying a Tweet" do
-    visit tweets_url
+  test "destroying a Gossip" do
+    visit gossips_url
     page.accept_confirm do
       click_on "Destroy", match: :first
     end
 
-    assert_text "Tweet was successfully destroyed"
+    assert_text "Gossip was successfully destroyed"
   end
 end

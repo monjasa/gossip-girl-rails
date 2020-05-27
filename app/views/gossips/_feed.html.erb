@@ -8,14 +8,14 @@
         </p>
       </figure>
       <div class="media-content">
-        <%= render 'tweets/form' %>
+        <%= render 'gossips/form' %>
       </div>
     </article>
   <% end %>
 
   <h3 class="title is-3 pt-5"><%= t '.title' %></h3>
 
-  <% @tweets.each do |tweet| %>
+  <% @gossips.each do |tweet| %>
     <div class="box">
       <article class="media">
       <figure class="media-left">
@@ -33,10 +33,10 @@
         <% if user_signed_in? && current_user.id == tweet.user.id %>
           <nav class="level">
             <div class="level-left is-mobile">
-              <%= link_to edit_tweet_path(tweet) do %>
+              <%= link_to edit_gossip_path(tweet), :class => "mr30" do %>
                 <i class="fa fa-pencil" aria-hidden="true"></i>
               <% end %>
-              <%= link_to tweet, method: :delete, data: { confirm: t('.delete_confirm') } do %>
+              <%= link_to tweet, method: :delete, :class => "mr30", data: { confirm: t('.delete_confirm') } do %>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               <% end %>
             </div>

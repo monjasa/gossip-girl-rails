@@ -2,47 +2,47 @@ require 'test_helper'
 
 class TweetsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @tweet = tweets(:one)
+    @gossip = tweets(:one)
   end
 
   test "should get index" do
-    get tweets_url
+    get gossips_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_tweet_url
+    get new_gossip_url
     assert_response :success
   end
 
-  test "should create tweet" do
-    assert_difference('Tweet.count') do
-      post tweets_url, params: { tweet: { message: @tweet.message } }
+  test "should create gossip" do
+    assert_difference('Gossip.count') do
+      post gossips_url, params: {gossip: {message: @gossip.message } }
     end
 
-    assert_redirected_to tweet_url(Tweet.last)
+    assert_redirected_to gossip_url(Gossip.last)
   end
 
-  test "should show tweet" do
-    get tweet_url(@tweet)
+  test "should show gossip" do
+    get gossip_url(@gossip)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_tweet_url(@tweet)
+    get edit_gossip_url(@gossip)
     assert_response :success
   end
 
-  test "should update tweet" do
-    patch tweet_url(@tweet), params: { tweet: { message: @tweet.message } }
-    assert_redirected_to tweet_url(@tweet)
+  test "should update gossip" do
+    patch gossip_url(@gossip), params: {gossip: {message: @gossip.message } }
+    assert_redirected_to gossip_url(@gossip)
   end
 
-  test "should destroy tweet" do
-    assert_difference('Tweet.count', -1) do
-      delete tweet_url(@tweet)
+  test "should destroy gossip" do
+    assert_difference('Gossip.count', -1) do
+      delete gossip_url(@gossip)
     end
 
-    assert_redirected_to tweets_url
+    assert_redirected_to gossips_url
   end
 end

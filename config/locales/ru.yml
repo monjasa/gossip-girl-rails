@@ -9,7 +9,7 @@ ru:
       sign_in: "Вход"
       sign_out: "Выйти"
       locale: "Язык"
-  tweets:
+  gossips:
     following:
       gossipmongers: "Сплетники"
     hot:

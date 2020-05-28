@@ -12,8 +12,8 @@ ru:
   gossips:
     following:
       gossipmongers: "Сплетники"
-    hot:
-      title: "Горячие сплетни"
+    tags:
+      title: "Категории"
     form:
       submit: "Пустить сплетни"
     create:
@@ -30,6 +30,20 @@ ru:
       followers_count: "Подписчики"
       following_count: "Подписки"
       title: "Аккаунт"
+    gossip:
+      comments:
+        zero: "Нет комментариев"
+        one: "%{count} комментарий"
+        few: "%{count} комментария"
+        many: "%{count} комментариев"
+        other: "%{count} комментариев"
+      new_comment: "Добавить комментарий"
+      gossip_title: "Сплетни"
+      gossip_by: "от"
+      sign_in_hint: "Чтобы добавить комментарий, тебе нужно"
+      sign_in_prompt: "войти в аккаунт"
+      sign_up_hint: "У тебя нет аккаунта? Самое время"
+      sign_up_prompt: "создать его"
   activerecord:
     errors:
       models:
@@ -37,3 +51,6 @@ ru:
           attributes:
             current_password:
               blank: "Текущий пароль не может быть пустым!"
+  comments:
+    comment:
+      delete_confirm: "Ты действительно хочешь стереть этот комментарий?"

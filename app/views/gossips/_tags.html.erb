@@ -1,0 +1,9 @@
+<nav class="panel">
+  <p class="panel-heading"><%= t '.title' %></p>
+
+  <% @tags.each do |tag| %>
+    <%= link_to tag.name, tag, class: "panel-block" %>
+  <% end %>
+</nav>
+
+<%= link_to "New tag", new_tag_path, class: "button is-info is-fullwidth" %>

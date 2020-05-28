@@ -1,0 +1,4 @@
+$('<%= escape_javascript(render(@comment)) %>').appendTo('#gossip-comments');
+$('#gossip-comments-title').text("<%= t 'gossips.gossip.comments', count: @gossip.comments.count %>");
+
+$('#comment_message').val(' ');

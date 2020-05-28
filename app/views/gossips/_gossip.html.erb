@@ -1,0 +1,58 @@
+<div class="column is-half">
+
+  <h3 class="title is-3"><%= t '.gossip_title' %> &ndash; <%= link_to gossip.tag.name, gossip.tag %></h3>
+  <h3 class="subtitle is-4 has-text-grey"><%= t '.gossip_by' %> @<%= gossip.user.username %></h3>
+
+  <div class="box">
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <%= user_avatar_tag gossip.user %>
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <strong><%= gossip.user.name %></strong>
+          <small><%= at_username gossip.user %></small>
+          <p><%= gossip.message %></p>
+        </div>
+
+        <% if user_signed_in? %>
+          <nav class="level">
+            <div class="level-left is-mobile">
+              <%= link_to new_gossip_comment_path(gossip, :author => at_username(gossip.user)), remote: true, :class => "mr30" do %>
+                <i class="fa fa-reply" aria-hidden="true"></i>
+              <% end %>
+            </div>
+
+            <div class="level-right is-mobile">
+              <% if current_user.id == gossip.user.id %>
+                <%= link_to edit_gossip_path(gossip), :class => "mr30" do %>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                <% end %>
+                <%= link_to gossip, method: :delete, :class => "mr30", data: { confirm: t('gossips.feed.delete_confirm') } do %>
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <% end %>
+              <% end %>
+            </div>
+          </nav>
+        <% end %>
+      </div>
+    </article>
+  </div>
+
+  <h3 id="gossip-comments-title" class="subtitle is-4 has-text-grey"><%= t '.comments', count: gossip.comments.count %></h3>
+
+  <div id="gossip-comments">
+    <%= render gossip.comments %>
+  </div>
+
+  <h4 class="title is-4 pt70"><%= t '.new_comment' %></h4>
+  <% if user_signed_in? %>
+    <%= render 'comments/form' %>
+  <% else %>
+    <p><%= t '.sign_in_hint' %> <%= link_to t('.sign_in_prompt'), new_user_session_path %>. <%= t '.sign_up_hint' %>
+      <%= link_to t('.sign_up_prompt'), new_user_registration_path %>!</p>
+  <% end %>
+
+</div>

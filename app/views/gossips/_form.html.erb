@@ -5,10 +5,29 @@
       <%= f.input :message,
                   input_html: { class: "textarea" },
                   wrapper: false,
-                  autofocus: true,
                   label_html: { class: "label" }
       %>
     </div>
   </div>
-  <%= f.button :submit, t('.submit'), class: "button is-info" %>
+
+  <div class="field">
+    <label class="label">Tag</label>
+    <div class="control has-icons-left">
+      <span class="select">
+        <%= f.input_field :tag_id,
+                          collection: @tags.map { |tag| [tag.name, tag.id] },
+                          prompt: "Select tag"
+        %>
+      </span>
+      <span class="icon is-small is-left">
+        <i class="fa fa-tag"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.button :submit, t('.submit'), class: "button is-info" %>
+    </div>
+  </div>
 <% end %>

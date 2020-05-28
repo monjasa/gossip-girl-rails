@@ -16,7 +16,7 @@ ru:
         password_confirmation: 'Подтверждение пароля'
         current_password: 'Текущий пароль'
         remember_me: 'Запомнить меня'
-      tweet:
+      gossip:
         message: "О чём посплетничаем сегодня?"
     hints:
       user:
@@ -31,7 +31,7 @@ ru:
         email: 'agathachristie1890@gmail.com'
         password: '******'
         password_confirmation: '******'
-      tweet:
+      gossip:
         message: "Расскажи об этом немедленно!"
     include_blanks:
       user:

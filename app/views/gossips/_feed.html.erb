@@ -13,36 +13,49 @@
     </article>
   <% end %>
 
-  <h3 class="title is-3 pt-5"><%= t '.title' %></h3>
+  <h3 class="title is-3"><%= t '.title' %></h3>
 
-  <% @gossips.each do |tweet| %>
+  <% @gossips.each do |gossip| %>
     <div class="box">
       <article class="media">
       <figure class="media-left">
         <p class="image is-64x64">
-          <%= user_avatar_tag tweet.user %>
+          <%= user_avatar_tag gossip.user %>
         </p>
       </figure>
       <div class="media-content">
         <div class="content">
-          <strong><%= tweet.user.name %></strong>
-          <small><%= at_username tweet.user %></small>
-          <p><%= tweet.message %></p>
+          <strong><%= gossip.user.name %></strong>
+          <small><%= at_username gossip.user %></small>
+          <p><%= gossip.message %></p>
         </div>
 
-        <% if user_signed_in? && current_user.id == tweet.user.id %>
-          <nav class="level">
-            <div class="level-left is-mobile">
-              <%= link_to edit_gossip_path(tweet), :class => "mr30" do %>
+        <nav class="level">
+          <div class="level-left is-mobile">
+
+            <% if gossip.comments.count > 0 %>
+              <%= link_to gossip, :class => "mr10" do %>
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                <span class="has-text-info mr30"><%= gossip.comments.count %></span>
+              <% end %>
+            <% else %>
+              <%= link_to gossip, :class => "mr30" do %>
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="level-right is-mobile">
+            <% if user_signed_in? && current_user.id == gossip.user.id %>
+              <%= link_to edit_gossip_path(gossip), :class => "mr30" do %>
                 <i class="fa fa-pencil" aria-hidden="true"></i>
               <% end %>
-              <%= link_to tweet, method: :delete, :class => "mr30", data: { confirm: t('.delete_confirm') } do %>
+              <%= link_to gossip, method: :delete, :class => "mr30", data: { confirm: t('.delete_confirm') } do %>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               <% end %>
-            </div>
-          </nav>
-        <% end %>
-
+            <% end %>
+          </div>
+        </nav>
       </div>
       </article>
     </div>

@@ -1,9 +1,16 @@
-<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div id="main" class="columns">
 
-<p>
-  <strong>Message:</strong>
-  <%= @gossip.message %>
-</p>
+      <div class="column is-one-quarter">
+        <% if user_signed_in? %>
+          <%= render 'profile_description' %>
+        <% end %>
+        <%= render 'tags' %>
+      </div>
 
-<%= link_to 'Edit', edit_gossip_path(@gossip) %> |
-<%= link_to 'Back', gossips_path %>
+      <%= render @gossip %>
+      <%= render 'following' %>
+    </div>
+  </div>
+</section>

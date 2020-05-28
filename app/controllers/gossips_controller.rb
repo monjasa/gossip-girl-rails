@@ -1,11 +1,12 @@
 class GossipsController < ApplicationController
-  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_gossip, only: [:show, :edit, :update, :destroy]
+  before_action :set_tags, only: [:index, :show, :new, :edit]
   before_action :authenticate_user!, except: [:index, :show]
 
   # GET /gossips
   # GET /gossips.json
   def index
-    @gossips = Gossip.all.order("created_at DESC")
+    @gossips = Gossip.all.order('created_at DESC')
     @gossip = Gossip.new
 
     @users = User.all
@@ -14,6 +15,8 @@ class GossipsController < ApplicationController
   # GET /gossips/1
   # GET /gossips/1.json
   def show
+    @gossips = Gossip.all.order('created_at DESC')
+    @users = User.all
   end
 
   # GET /gossips/new
@@ -28,7 +31,7 @@ class GossipsController < ApplicationController
   # POST /gossips
   # POST /gossips.json
   def create
-    @gossip = current_user.gossips.build(tweet_params)
+    @gossip = current_user.gossips.build(gossip_params)
 
     respond_to do |format|
       if @gossip.save
@@ -45,7 +48,7 @@ class GossipsController < ApplicationController
   # PATCH/PUT /gossips/1.json
   def update
     respond_to do |format|
-      if @gossip.update(tweet_params)
+      if @gossip.update(gossip_params)
         format.html { redirect_to @gossip, notice: t('.notice') }
         format.json { render :show, status: :ok, location: @gossip }
       else
@@ -67,12 +70,16 @@ class GossipsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_tweet
+    def set_gossip
       @gossip = Gossip.find(params[:id])
     end
 
+    def set_tags
+      @tags = Tag.all.order('created_at DESC')
+    end
+
     # Only allow a list of trusted parameters through.
-    def tweet_params
-      params.require(:gossip).permit(:message)
+    def gossip_params
+      params.require(:gossip).permit(:message, :tag_id)
     end
 end

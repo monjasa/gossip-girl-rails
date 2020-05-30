@@ -18,6 +18,7 @@ require("jquery")
 // const imagePath = (name) => images(name, true)
 
 import * as application_controller from "../controllers/application_controller"
+import * as registrations_controller from "../controllers/registrations_controller"
 
 $(document).on('turbolinks:load', function() {
 
@@ -25,5 +26,6 @@ $(document).on('turbolinks:load', function() {
         $(".notification").alert('close');
     });
 
-    application_controller.init()
+    application_controller.init();
+    registrations_controller.init();
 })

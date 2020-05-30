@@ -5,7 +5,7 @@ module ApplicationHelper
     }.join.html_safe
   end
 
-  def user_avatar_tag(user, size = 64)
+  def user_avatar_tag(user, size = 128)
     if user.avatar.attached?
       image_tag user.avatar.variant(resize: "#{size}x#{size}!"), alt: user.name
     else

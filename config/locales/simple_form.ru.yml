@@ -18,6 +18,8 @@ ru:
         remember_me: 'Запомнить меня'
       gossip:
         message: "О чём посплетничаем сегодня?"
+      comment:
+        message: "Что же ты думаешь по этому поводу?"
     hints:
       user:
         username: 'Твои подруги запомнят тебя по этому имени!'
@@ -32,6 +34,8 @@ ru:
         password: '******'
         password_confirmation: '******'
       gossip:
+        message: "Расскажи об этом немедленно!"
+      comment:
         message: "Расскажи об этом немедленно!"
     include_blanks:
       user:

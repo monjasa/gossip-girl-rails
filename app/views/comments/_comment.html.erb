@@ -5,21 +5,23 @@
         <%= user_avatar_tag comment.user %>
       </p>
     </figure>
+
     <div class="media-content">
       <div class="content">
-        <strong><%= comment.user.name %></strong>
-        <small><%= at_username comment.user %></small>
+        <div class="container">
+          <strong><%= comment.user.name %></strong>
+          <small><%= at_username comment.user %></small>
+        </div>
+        <div class="container mb20">
+          <small class="has-text-grey-light"><%= time_ago_in_words(comment.created_at) %> <%= t 'datetime.ago' %></small>
+        </div>
         <p><%= comment.message %></p>
       </div>
 
       <% if user_signed_in? %>
         <nav class="level is-mobile">
-          <div class="level-left is-mobile">
-
-          </div>
-
+          <div class="level-left is-mobile"></div>
           <div class="level-right is-mobile">
-
             <% if current_user.id == comment.user.id %>
               <%= link_to edit_gossip_comment_path(comment.gossip, comment), :class => "mr30" do %>
                 <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -27,10 +29,10 @@
               <%= link_to [comment.gossip, comment], method: :delete, :class => "mr30", data: { confirm: t('.delete_confirm') } do %>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               <% end %>
-
-            <% end %>
-            <%= link_to new_gossip_comment_path(comment.gossip, :author => at_username(comment.user)), remote: true, :class => "mr30" do %>
-              <i class="fa fa-reply" aria-hidden="true"></i>
+            <% else %>
+              <%= link_to new_gossip_comment_path(comment.gossip, :author => at_username(comment.user)), remote: true, :class => "mr30" do %>
+                <i class="fa fa-reply" aria-hidden="true"></i>
+              <% end %>
             <% end %>
           </div>
         </nav>

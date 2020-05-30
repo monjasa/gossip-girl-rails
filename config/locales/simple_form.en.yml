@@ -18,6 +18,8 @@ en:
         remember_me: 'Remember me'
       gossip:
         message: "What are we going to gossip about?"
+      comment:
+        message: "What are your thoughts on it?"
     hints:
       user:
         username: 'You''ll become popular with this username!'
@@ -32,6 +34,8 @@ en:
         password: '********'
         password_confirmation: '********'
       gossip:
+        message: "Tell everything about it right away!"
+      comment:
         message: "Tell everything about it right away!"
     include_blanks:
       user:

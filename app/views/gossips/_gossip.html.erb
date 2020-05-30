@@ -12,19 +12,19 @@
       </figure>
       <div class="media-content">
         <div class="content">
-          <strong><%= gossip.user.name %></strong>
-          <small><%= at_username gossip.user %></small>
+          <div class="container">
+            <strong><%= gossip.user.name %></strong>
+            <small><%= at_username gossip.user %></small>
+          </div>
+          <div class="container mb20">
+            <small class="has-text-grey-light"><%= time_ago_in_words(gossip.created_at) %> <%= t 'datetime.ago' %></small>
+          </div>
           <p><%= gossip.message %></p>
         </div>
 
         <% if user_signed_in? %>
-          <nav class="level">
-            <div class="level-left is-mobile">
-              <%= link_to new_gossip_comment_path(gossip, :author => at_username(gossip.user)), remote: true, :class => "mr30" do %>
-                <i class="fa fa-reply" aria-hidden="true"></i>
-              <% end %>
-            </div>
-
+          <nav class="level is-mobile">
+            <div class="level-left is-mobile"></div>
             <div class="level-right is-mobile">
               <% if current_user.id == gossip.user.id %>
                 <%= link_to edit_gossip_path(gossip), :class => "mr30" do %>
@@ -32,6 +32,10 @@
                 <% end %>
                 <%= link_to gossip, method: :delete, :class => "mr30", data: { confirm: t('gossips.feed.delete_confirm') } do %>
                   <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <% end %>
+              <% else %>
+                <%= link_to new_gossip_comment_path(gossip, :author => at_username(gossip.user)), remote: true, :class => "mr30" do %>
+                  <i class="fa fa-reply" aria-hidden="true"></i>
                 <% end %>
               <% end %>
             </div>

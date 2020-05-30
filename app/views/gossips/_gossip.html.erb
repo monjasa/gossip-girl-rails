@@ -1,7 +1,7 @@
 <div class="column is-half">
 
   <h3 class="title is-3"><%= t '.gossip_title' %> &ndash; <%= link_to gossip.tag.name, gossip.tag %></h3>
-  <h3 class="subtitle is-4 has-text-grey"><%= t '.gossip_by' %> @<%= gossip.user.username %></h3>
+  <h3 class="subtitle is-4 has-text-grey"><%= t '.gossip_by' %> <%= at_username gossip.user %></h3>
 
   <div class="box">
     <article class="media">

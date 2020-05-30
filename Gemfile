@@ -46,6 +46,11 @@ gem 'world-flags', '~> 0.6.6'
 # Countries and languages in I18n.locale for select_tag or output in 85 languages
 gem 'countries_and_languages', '~> 0.2.0', :require => 'countries_and_languages/rails'
 
+# Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser.
+gem 'nokogiri', '~> 1.10', '>= 1.10.9'
+# This gem brings you the power of the premailer gem to Rails without any configuration needs
+gem 'premailer-rails', '~> 1.11', '>= 1.11.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

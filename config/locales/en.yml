@@ -94,3 +94,7 @@ en:
       x_years:
         one: 1 year
         other: "%{count} years"
+  devise:
+    mailer:
+      confirmation_instructions:
+        confirm-message: "To join our community, you can confirm your account through the link below. We are waiting for you!"

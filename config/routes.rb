@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :comments
     end
     root 'gossips#index'
-    devise_for :users, :controllers => { registrations: 'registrations' }
+    devise_for :users, controllers: { registrations: 'registrations', confirmations: 'users/confirmations' }
   end
 
   root to: redirect("/ru"), as: :redirected_root

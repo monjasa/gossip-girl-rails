@@ -1,5 +1,22 @@
-<p>Welcome <%= @email %>!</p>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h3 class="title is-3"><%= t '.welcome', username: at_username(@resource) %></h3>
 
-<p>You can confirm your account email through the link below:</p>
+        <div class="field">
+          <%= t '.confirm-message' %>
+        </div>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale) %></p>
+        <div class="field">
+          <div class="control">
+            <%= link_to t('.confirm-button'),
+                        confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale),
+                        class: "button is-info is-fullwidth"
+            %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

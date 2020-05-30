@@ -2,7 +2,7 @@
   <nav class="panel">
     <p class="panel-heading"><%= t '.gossipmongers' %></p>
 
-    <% @users.each do |user| %>
+    <% @users.where.not('confirmed_at' => nil).each do |user| %>
       <div class="panel-block">
         <article class="media">
           <figure class="media-left">

@@ -22,14 +22,15 @@ en:
         message: "What are your thoughts on it?"
     hints:
       user:
-        username: 'You''ll become popular with this username!'
+        username: 'Username must be an alphanumerical one.'
+        email_registration: 'We will send you a confirmation email to the given address.'
         current_password: 'We need your current password to confirm your changes.'
         password_min_length: 'Password must be at least %{min_length} characters long.'
         password_not_required: 'Leave it blank if you don''t want to change it.'
     placeholders:
       user:
         name: 'Agatha Christie'
-        username: 'christie19'
+        username: 'aggie.chris90'
         email: 'agathachristie1890@gmail.com'
         password: '********'
         password_confirmation: '********'

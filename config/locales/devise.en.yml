@@ -6,6 +6,8 @@ en:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+      new:
+        title: "Confirmation instructions"
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
@@ -71,18 +73,20 @@ en:
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
     shared:
       links:
-        sign_in: "Log in"
+        sign_in: "Sign In"
         sign_up: "Sign Up"
         password_forgotten: "Forgot your password?"
+        confirmation_missing: "Didn't receive confirmation instructions?"
+        options: "Other options"
     form:
       back: "Back"
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
+      already_confirmed: "Account was already confirmed, please try signing in."
+      confirmation_period_expired: "Account needs to be confirmed within %{period}, please request a new one."
+      expired: "Account confirmation has expired, please request a new one."
+      not_found: "Account with given credentials not found."
+      not_locked: "Account with given credentials was not locked."
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"

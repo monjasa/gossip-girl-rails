@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_comment, only: [:edit, :update, :show, :destroy]
   before_action :set_gossip, only: [:create, :edit, :update, :show, :destroy]
+  before_action :authenticate_user!
 
   def new
   end

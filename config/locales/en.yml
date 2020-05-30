@@ -47,8 +47,24 @@ en:
       models:
         user:
           attributes:
+            name:
+              blank: "Full name must not be blank!"
+            username:
+              blank: "Username must not be blank!"
+              taken: "Username is already taken!"
+            email:
+              blank: "Email address must not be blank!"
+              taken: "Email address is already taken!"
+            password:
+              blank: "Password must not be blank!"
+              too_short: "Password is too short!"
             current_password:
-              blank: "Current password must not be empty!"
+              blank: "Current password must not be blank!"
+              invalid: "Current password is incorrect!"
+            password_confirmation:
+              confirmation: "Passwords do not match!"
+            confirmation_token:
+              blank: "Cannot confirm non-existent account!"
   comments:
     comment:
       delete_confirm: "Are you sure you want to delete this comment?"
@@ -98,3 +114,6 @@ en:
     mailer:
       confirmation_instructions:
         confirm-message: "To join our community, you can confirm your account through the link below. We are waiting for you!"
+    confirmations:
+      new:
+        submit: "Resend instructions"

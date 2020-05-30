@@ -7,6 +7,9 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "bulma-checkradio": "^1.1.1",
+    "bulma-extensions": "^6.2.7",
+    "cool-checkboxes-for-bulma.io": "^1.1.0",
     "jquery": "^3.5.1",
     "turbolinks": "^5.2.0"
   },

@@ -50,6 +50,8 @@ gem 'countries_and_languages', '~> 0.2.0', :require => 'countries_and_languages/
 gem 'nokogiri', '~> 1.10', '>= 1.10.9'
 # This gem brings you the power of the premailer gem to Rails without any configuration needs
 gem 'premailer-rails', '~> 1.11', '>= 1.11.1'
+# Ruby on rails wrapper for Bulma framework extensions
+gem 'bulma-extensions-rails', '~> 6.2', '>= 6.2.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -22,14 +22,15 @@ ru:
         message: "Что же ты думаешь по этому поводу?"
     hints:
       user:
-        username: 'Твои подруги запомнят тебя по этому имени!'
+        username: 'Имя может состоять из букв латинского алфавита и цифр.'
+        email_registration: 'На свою почту ты получишь письмо для подтверждения учетной записи.'
         current_password: 'Чтобы подтвердить изменения, введи текущий пароль.'
         password_min_length: 'Пароль должен состоять минимум из %{min_length} символов.'
         password_not_required: 'Оставь поле пустым, если не хочешь менять пароль.'
     placeholders:
       user:
         name: 'Агата Кристи'
-        username: 'christie19'
+        username: 'aggie.chris90'
         email: 'agathachristie1890@gmail.com'
         password: '******'
         password_confirmation: '******'

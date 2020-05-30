@@ -1,6 +1,15 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
 
+  protected
+  def authenticate_user!
+    if user_signed_in?
+      super
+    else
+      redirect_to new_user_session_path, :alert => t('devise.failure.unauthenticated')
+    end
+  end
+
   private
   def default_url_options
     {locale: I18n.locale}

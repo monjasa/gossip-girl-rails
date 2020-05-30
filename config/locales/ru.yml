@@ -49,8 +49,24 @@ ru:
       models:
         user:
           attributes:
+            name:
+              blank: "Полное имя не может быть пустым!"
+            username:
+              blank: "Имя пользователя не может быть пустым!"
+              taken: "Это имя пользователя уже используется!"
+            email:
+              blank: "Адрес электронной почты не может быть пустым!"
+              taken: "Этот адрес электронной почты уже используется!"
+            password:
+              blank: "Пароль не может быть пустым!"
+              too_short: "Пароль не может быть таким коротким!"
             current_password:
               blank: "Текущий пароль не может быть пустым!"
+              invalid: "Введенный пароль не совпадает с текущим!"
+            password_confirmation:
+              confirmation: "Введенные пароли не совпадают!"
+            confirmation_token:
+              blank: "Невозможно подтвердить отсутствующий аккаунт!"
   comments:
     comment:
       delete_confirm: "Ты действительно хочешь стереть этот комментарий?"
@@ -120,3 +136,7 @@ ru:
         few: "%{count} года"
         many: "%{count} лет"
         other: "%{count} года"
+  devise:
+    confirmations:
+      new:
+        title: "Подтверждение аккаунта"

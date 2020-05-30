@@ -23,6 +23,7 @@ $white: #fdfdfd;
 $danger: #F05D65;
 
 @import "bulma";
+@import "bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio";
 @import "functions";
 
 .notification{
@@ -35,6 +36,14 @@ $danger: #F05D65;
 
 .error {
   color: $red;
+}
+
+a {
+  color: $info;
+}
+
+.input {
+  margin-bottom: $spacing-10;
 }
 
 .navbar {
@@ -76,6 +85,16 @@ $danger: #F05D65;
 
 .field {
   align-items: center;
+}
+
+.menu-list {
+  li {
+    line-height: 0.25;
+  }
+  a {
+    color: $info;
+    padding: $spacing-40;
+  }
 }
 
 .image {

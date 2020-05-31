@@ -1,4 +1,13 @@
 module ApplicationHelper
+
+  def is_author?(item)
+    current_user.id == item.user.id
+  end
+
+  def has_role?(role)
+    current_user && current_user.has_role?(role)
+  end
+
   def alternate_locales
     I18n.available_locales.map{|l|
       yield(l)

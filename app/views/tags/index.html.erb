@@ -12,14 +12,18 @@
               <div class="level-right">
                 <div class="container buttons is-right">
                   <%= link_to t('.show'), tag, class: "button is-info" %>
-                  <%= link_to t('.edit'), edit_tag_path(tag), class:'button' %>
-                  <%= link_to t('.delete'), tag, class:'button is-danger', method: :delete, data: { confirm: t('.delete_confirm') } %>
+                  <% if has_role?(:admin) %>
+                    <%= link_to t('.edit'), edit_tag_path(tag), class:'button' %>
+                    <%= link_to t('.delete'), tag, class:'button is-danger', method: :delete, data: { confirm: t('.delete_confirm') } %>
+                <% end %>
                 </div>
               </div>
             </div>
           <% end %>
 
-          <%= link_to t('.new'), new_tag_path, class: "button is-medium is-info is-fullwidth" %>
+          <% if has_role?(:admin) %>
+            <%= link_to t('.new'), new_tag_path, class: "button is-medium is-info is-fullwidth" %>
+          <% end %>
         </div>
       </div>
   </div>

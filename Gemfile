@@ -45,6 +45,10 @@ gem 'aws-sdk-s3', '~> 1.64', require: false
 gem 'world-flags', '~> 0.6.6'
 # Countries and languages in I18n.locale for select_tag or output in 85 languages
 gem 'countries_and_languages', '~> 0.2.0', :require => 'countries_and_languages/rails'
+# Simple authorization solution for Rails. All permissions are stored in a single location
+gem 'cancancan', '~> 3.1'
+# Very simple Roles library without any authorization enforcement supporting scope on resource objects (instance or class)
+gem 'rolify', '~> 5.2'
 
 # Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser.
 gem 'nokogiri', '~> 1.10', '>= 1.10.9'

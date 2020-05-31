@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:index, :show]
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
 
   # GET /tags
@@ -67,6 +69,12 @@ class TagsController < ApplicationController
   end
 
   private
+    def authenticate_admin!
+      unless current_user.has_role?(:admin)
+        redirect_to tags_path
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_tag
       @tag = Tag.find(params[:id])

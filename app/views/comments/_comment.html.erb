@@ -22,14 +22,16 @@
         <nav class="level is-mobile">
           <div class="level-left is-mobile"></div>
           <div class="level-right is-mobile">
-            <% if current_user.id == comment.user.id %>
+            <% if is_author?(comment) || has_role?(:admin) %>
               <%= link_to edit_gossip_comment_path(comment.gossip, comment), :class => "mr30" do %>
                 <i class="fa fa-pencil" aria-hidden="true"></i>
               <% end %>
               <%= link_to [comment.gossip, comment], method: :delete, :class => "mr30", data: { confirm: t('.delete_confirm') } do %>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               <% end %>
-            <% else %>
+            <% end %>
+
+            <% unless is_author?(comment) %>
               <%= link_to new_gossip_comment_path(comment.gossip, :author => at_username(comment.user)), remote: true, :class => "mr30" do %>
                 <i class="fa fa-reply" aria-hidden="true"></i>
               <% end %>

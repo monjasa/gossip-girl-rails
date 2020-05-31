@@ -6,4 +6,6 @@
   <% end %>
 </nav>
 
-<%= link_to t('tags.index.new'), new_tag_path, class: "button is-info is-fullwidth" %>
+<% if has_role?(:admin) %>
+  <%= link_to t('tags.index.new'), new_tag_path, class: "button is-info is-fullwidth" %>
+<% end %>

@@ -4,4 +4,5 @@ class Gossip < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   # validates :message, presence: true
+  resourcify
 end

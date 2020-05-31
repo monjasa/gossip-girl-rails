@@ -1,22 +1,16 @@
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <h3 class="title is-3"><%= t '.welcome', username: at_username(@resource) %></h3>
+<div class="email-content">
+  <h3 class="email-title"><%= t '.welcome', username: at_username(@resource) %></h3>
 
-        <div class="field">
-          <%= t '.confirm-message' %>
-        </div>
+  <div class="email-field">
+    <%= t '.confirm-message' %>
+  </div>
 
-        <div class="field">
-          <div class="control">
-            <%= link_to t('.confirm-button'),
-                        confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale),
-                        class: "button is-info is-fullwidth"
-            %>
-          </div>
-        </div>
-      </div>
+  <div class="email-field">
+    <div class="email-control">
+      <%= link_to t('.confirm-button'),
+                  confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale),
+                  class: "email-button"
+      %>
     </div>
   </div>
-</section>
+</div>

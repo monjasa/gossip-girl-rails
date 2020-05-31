@@ -4,13 +4,13 @@
 
       <div class="column is-one-quarter">
         <% if user_signed_in? %>
-          <%= render 'profile_description' %>
+          <%= render 'shared/profile_description' %>
         <% end %>
-        <%= render 'tags' %>
+        <%= render 'shared/tags' %>
       </div>
 
       <%= render @gossip %>
-      <%= render 'following' %>
+      <%= render 'shared/users' %>
     </div>
   </div>
 </section>

@@ -20,6 +20,8 @@ en:
         message: "What are we going to gossip about?"
       comment:
         message: "What are your thoughts on it?"
+      tag:
+        name: "Tag Name"
     hints:
       user:
         username: 'Username must be an alphanumerical one.'
@@ -30,7 +32,7 @@ en:
     placeholders:
       user:
         name: 'Agatha Christie'
-        username: 'aggie.chris90'
+        username: 'aggie.christie90'
         email: 'agathachristie1890@gmail.com'
         password: '********'
         password_confirmation: '********'
@@ -38,6 +40,8 @@ en:
         message: "Tell everything about it right away!"
       comment:
         message: "Tell everything about it right away!"
+      tag:
+        name: "Such an interesting topic"
     include_blanks:
       user:
         age: 'Rather not say'

@@ -1,9 +1,15 @@
-<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-one-quarter">
+        <% if user_signed_in? %>
+          <%= render 'shared/profile_description' %>
+        <% end %>
+        <%= render 'shared/tags' %>
+      </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @tag.name %>
-</p>
-
-<%= link_to 'Edit', edit_tag_path(@tag) %> |
-<%= link_to 'Back', tags_path %>
+      <%= render 'feed' %>
+      <%= render 'shared/users' %>
+    </div>
+  </div>
+</section>

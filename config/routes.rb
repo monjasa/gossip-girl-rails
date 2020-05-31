@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :tags
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     resources :tags
     resources :gossips do

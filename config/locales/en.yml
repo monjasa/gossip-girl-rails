@@ -10,12 +10,9 @@ en:
       locale: "Language"
       sign_in: "Sign In"
   gossips:
-    following:
-      gossipmongers: "Gossipmongers"
-    tags:
-      title: "Tags"
     form:
       submit: "Spread a Gossip"
+      tag_prompt: "Select Tag"
     create:
       notice: "The gossip was successfully spread."
     destroy:
@@ -23,13 +20,7 @@ en:
     update:
       notice: "The gossip was successfully updated."
     feed:
-      delete_confirm: "Are you sure you want to delete this gossip?"
       title: "Latest gossips"
-    profile_description:
-      tweets_count: "gossips"
-      followers_count: "Followers"
-      following_count: "Following"
-      title: "Profile"
     gossip:
       comments:
         zero: "No comments yet"
@@ -117,3 +108,33 @@ en:
     confirmations:
       new:
         submit: "Resend instructions"
+  tags:
+    new:
+      title: "New Tag"
+    form:
+      submit: "Save Tag"
+    feed:
+      gossips:
+        zero: "No gossips yet"
+        one: "1 Gossip"
+        other: "%{count} Gossips"
+    index:
+      new: "New Tag"
+      title: "Tags"
+      show: "View Tag"
+      edit: "Edit Tag"
+      delete: "Delete Tag"
+      delete_confirm: "Are you sure you want to delete this tag?"
+    edit:
+      title: "Edit Tag"
+  shared:
+    gossips:
+      delete_confirm: "Are you sure you want to delete this gossip?"
+      in: "in"
+    profile_description:
+      tweets_count: "gossips"
+      followers_count: "Followers"
+      following_count: "Following"
+      title: "Profile"
+    users:
+      title: "Gossipmongers"

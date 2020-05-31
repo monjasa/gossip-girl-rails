@@ -10,12 +10,9 @@ ru:
       sign_out: "Выйти"
       locale: "Язык"
   gossips:
-    following:
-      gossipmongers: "Сплетники"
-    tags:
-      title: "Категории"
     form:
       submit: "Пустить сплетни"
+      tag_prompt: "Выбери категорию"
     create:
       notice: "Сплетни были успешно добавлены."
     destroy:
@@ -23,13 +20,7 @@ ru:
     update:
       notice: "Сплетни были успешно обновлены."
     feed:
-      delete_confirm: "Ты действительно хочешь стереть эти сплетни?"
       title: "Самые свежие сплетни"
-    profile_description:
-      tweets_count: "Сплетни"
-      followers_count: "Подписчики"
-      following_count: "Подписки"
-      title: "Аккаунт"
     gossip:
       comments:
         zero: "Нет комментариев"
@@ -140,3 +131,35 @@ ru:
     confirmations:
       new:
         title: "Подтверждение аккаунта"
+  tags:
+    new:
+      title: "Новая категория"
+    form:
+      submit: "Сохранить категорию"
+    feed:
+      gossips:
+        zero: "Нет сплетен"
+        one: "%{count} сплетня"
+        few: "%{count} сплетни"
+        many: "%{count} сплетен"
+        other: "%{count} сплетен"
+    index:
+      new: "Новая категория"
+      title: "Категории"
+      show: "Перейти"
+      edit: "Редактировать"
+      delete: "Удалить"
+      delete_confirm: "Ты действительно хочешь удалить эту категорию?"
+    edit:
+      title: "Редактирование категории"
+  shared:
+    gossips:
+      delete_confirm: "Ты действительно хочешь стереть эти сплетни?"
+      in: "в"
+    profile_description:
+      tweets_count: "Сплетни"
+      followers_count: "Подписчики"
+      following_count: "Подписки"
+      title: "Аккаунт"
+    users:
+      title: "Сплетники"

@@ -1,6 +1,6 @@
 <div class="column">
   <nav class="panel">
-    <p class="panel-heading"><%= t '.gossipmongers' %></p>
+    <p class="panel-heading"><%= t '.title' %></p>
 
     <% @users.where.not('confirmed_at' => nil).each do |user| %>
       <div class="panel-block">
@@ -21,6 +21,5 @@
         </article>
       </div>
     <% end %>
-
   </nav>
 </div>

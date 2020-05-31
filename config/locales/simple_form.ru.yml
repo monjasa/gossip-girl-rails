@@ -20,6 +20,8 @@ ru:
         message: "О чём посплетничаем сегодня?"
       comment:
         message: "Что же ты думаешь по этому поводу?"
+      tag:
+        name: "Название категории"
     hints:
       user:
         username: 'Имя может состоять из букв латинского алфавита и цифр.'
@@ -30,7 +32,7 @@ ru:
     placeholders:
       user:
         name: 'Агата Кристи'
-        username: 'aggie.chris90'
+        username: 'aggie.christie90'
         email: 'agathachristie1890@gmail.com'
         password: '******'
         password_confirmation: '******'
@@ -38,6 +40,8 @@ ru:
         message: "Расскажи об этом немедленно!"
       comment:
         message: "Расскажи об этом немедленно!"
+      tag:
+        name: "Очень интересная тема"
     include_blanks:
       user:
         age: 'Предпочту оставить в тайне'

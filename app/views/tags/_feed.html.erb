@@ -1,0 +1,10 @@
+<div class="column is-half">
+  <h3 class="title is-3"><%= @tag.name %></h3>
+  <h3 class="subtitle is-4 has-text-grey"><%= t '.gossips', count: @gossips.count %></h3>
+
+  <% if @gossips.any? %>
+    <%= render 'shared/gossips' %>
+  <% else %>
+
+  <% end %>
+</div>

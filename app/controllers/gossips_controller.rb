@@ -6,17 +6,17 @@ class GossipsController < ApplicationController
   # GET /gossips
   # GET /gossips.json
   def index
-    @gossips = Gossip.all.order('created_at DESC')
     @gossip = Gossip.new
+    @gossips = Gossip.all.order('created_at DESC')
 
-    @users = User.all
+    @users = User.where.not('confirmed_at' => nil)
   end
 
   # GET /gossips/1
   # GET /gossips/1.json
   def show
     @gossips = Gossip.all.order('created_at DESC')
-    @users = User.all
+    @users = User.where.not('confirmed_at' => nil)
   end
 
   # GET /gossips/new
@@ -75,7 +75,7 @@ class GossipsController < ApplicationController
     end
 
     def set_tags
-      @tags = Tag.all.order('created_at DESC')
+      @tags = Tag.all.order('created_at ASC')
     end
 
     # Only allow a list of trusted parameters through.

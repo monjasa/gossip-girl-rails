@@ -49,6 +49,8 @@ gem 'countries_and_languages', '~> 0.2.0', :require => 'countries_and_languages/
 gem 'cancancan', '~> 3.1'
 # Very simple Roles library without any authorization enforcement supporting scope on resource objects (instance or class)
 gem 'rolify', '~> 5.2'
+# FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record
+gem 'friendly_id', '~> 5.3'
 
 # Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser.
 gem 'nokogiri', '~> 1.10', '>= 1.10.9'

@@ -18,10 +18,10 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to gossip_path(@gossip), notice: 'Comment was successfully created.' }
+        format.html { redirect_to gossip_path(@gossip), notice: t('.notice') }
         format.js
       else
-        format.html { redirect_to gossip_path(@gossip), notice: 'Comment was not added. Please try again.' }
+        format.html { redirect_to gossip_path(@gossip), notice: t('unsuccessful') }
         format.js
       end
     end
@@ -32,9 +32,9 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to gossip_path(@gossip), notice: 'Comment was successfully updated.' }
+        format.html { redirect_to gossip_path(@gossip), notice: t('.notice') }
       else
-        format.html { redirect_to gossip_path(@gossip), notice: 'Comment was not updated. Please try again.' }
+        format.html { redirect_to gossip_path(@gossip), notice: t('.unsuccessful') }
         format.json { render json: comment.errors, status: :unprocessable_entity }
       end
     end
@@ -43,7 +43,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = @gossip.comments.find(params[:id])
     @comment.destroy
-    redirect_to gossip_path(@gossip)
+    redirect_to gossip_path(@gossip), notice: t('.notice')
   end
 
   private

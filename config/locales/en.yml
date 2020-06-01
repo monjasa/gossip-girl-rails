@@ -14,11 +14,11 @@ en:
       submit: "Spread a Gossip"
       tag_prompt: "Select Tag"
     create:
-      notice: "The gossip was successfully spread."
+      notice: "Gossip was successfully spread."
     destroy:
-      notice: "The gossip was successfully destroyed."
+      notice: "Gossip was successfully deleted."
     update:
-      notice: "The gossip was successfully updated."
+      notice: "Gossip was successfully updated."
     feed:
       title: "Latest gossips"
     gossip:
@@ -63,6 +63,13 @@ en:
       submit: "Leave a comment"
     edit:
       title: "Editing Comment"
+    create:
+      notice: "Comment was successfully created."
+    update:
+      notice: "Comment was successfully updated."
+      unsuccessful: "Comment was not updated. Please try again."
+    destroy:
+      notice: "Comment was successfully deleted."
   datetime:
     ago: "ago"
     distance_in_words:
@@ -111,6 +118,12 @@ en:
       new:
         submit: "Resend instructions"
   tags:
+    create:
+      notice: "Tag was successfully created."
+    destroy:
+      notice: "Tag was successfully deleted."
+    update:
+      notice: "Tag was successfully updated."
     new:
       title: "New Tag"
     form:
@@ -140,3 +153,4 @@ en:
       title: "Profile"
     users:
       title: "Gossipmongers"
+  unsuccessful: "Comment was not added. Please try again."

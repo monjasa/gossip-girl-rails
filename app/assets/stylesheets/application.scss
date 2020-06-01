@@ -22,9 +22,22 @@ $primary: #58BF54;
 $white: #fdfdfd;
 $danger: #F05D65;
 
+$footer-background-color: $info;
+$footer-padding: 1.25rem 1rem 1.25rem;
+
 @import "bulma";
 @import "bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio";
 @import "functions";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
 
 .notification{
   border-radius: 0;
@@ -133,7 +146,7 @@ th {
     right: 0;
 
     transform: translateY(-50%);
-    transition: all .4s ease-in-out;
+    transition: transform 0.4s ease-in-out, opacity 0.35s ease-in-out;
     pointer-events: none;
   }
 
@@ -141,5 +154,11 @@ th {
     opacity: 1;
     transform: none;
     pointer-events: auto;
+  }
+}
+
+.is-fullwidth-mobile {
+  @include until($tablet) {
+    width: 100%;
   }
 }

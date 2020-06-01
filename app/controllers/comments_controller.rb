@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:edit, :update, :show, :destroy]
-  before_action :set_gossip, only: [:create, :edit, :update, :show, :destroy]
+  before_action :set_comment, only: [:edit, :update, :destroy]
+  before_action :set_gossip, only: [:create, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :authenticate_editor!, only: [:edit, :update, :destroy]
 
   def new
   end
@@ -46,6 +47,12 @@ class CommentsController < ApplicationController
   end
 
   private
+
+    def authenticate_editor!
+      unless helpers.is_author?(@comment) || helpers.has_role?(:admin)
+        redirect_to gossip_path(@gossip)
+      end
+    end
 
     def set_gossip
       @gossip = Gossip.find(params[:gossip_id])

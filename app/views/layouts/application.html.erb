@@ -16,73 +16,82 @@
 </head>
 
 <body>
-<% if flash[:notice] %>
-  <div class="notification is-primary global-notification">
-    <p class="notice"><%= notice %></p>
-  </div>
-<% end %>
-
-<% if flash[:alert] %>
-  <div class="notification is-danger global-notification">
-    <p class="alert"><%= alert %></p>
-  </div>
-<% end %>
-
-<nav class="navbar is-info" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <%= link_to root_path, class: "navbar-item is-brand" do %>
-      <h1 class="title is-4"><%= t '.title' %></h1>
+  <div class="main">
+    <% if flash[:notice] %>
+      <div class="notification is-primary global-notification">
+        <p class="notice"><%= notice %></p>
+      </div>
     <% end %>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+    <% if flash[:alert] %>
+      <div class="notification is-danger global-notification">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item is-brand" do %>
+          <h1 class="title is-4"><%= t '.title' %></h1>
+        <% end %>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="columns is-mobile">
+              <% if user_signed_in? %>
+                <div class="column">
+                  <%= link_to current_user.name, edit_user_registration_path, class: "button is-info is-fullwidth" %>
+                </div>
+                <div class="column">
+                  <%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete, class: "button is-info is-fullwidth" %>
+                </div>
+              <% else %>
+                <div class="column">
+                  <%= link_to t('.sign_in'), new_user_session_path, class: "button is-info is-fullwidth" %>
+                </div>
+                <div class="column">
+                  <%= link_to t('.sign_up'), new_user_registration_path, class: "button is-info is-fullwidth" %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <%= link_to t('.new'), new_gossip_path, class: "button is-info is-inverted is-fullwidth" %>
+            </div>
+          </div>
+
+          <div class="navbar-item">
+            <ul class="f32">
+              <% alternate_locales do |locale| %>
+                <%= link_to root_path(locale: locale) do %>
+                  <%= flag(locale == :en ? :us : locale, :selected => true) %>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <%= yield %>
   </div>
 
-  <div id="navbar-menu" class="navbar-menu">
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="columns is-mobile">
-          <% if user_signed_in? %>
-            <div class="column">
-              <%= link_to current_user.name, edit_user_registration_path, class: "button is-info is-fullwidth" %>
-            </div>
-            <div class="column">
-              <%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete, class: "button is-info is-fullwidth" %>
-            </div>
-          <% else %>
-            <div class="column">
-              <%= link_to t('.sign_in'), new_user_session_path, class: "button is-info is-fullwidth" %>
-            </div>
-            <div class="column">
-              <%= link_to t('.sign_up'), new_user_registration_path, class: "button is-info is-fullwidth" %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="navbar-item">
-        <div class="buttons">
-          <%= link_to t('.new'), user_signed_in? ? root_path : new_gossip_path, class: "button is-info is-inverted is-fullwidth" %>
-        </div>
-      </div>
-
-      <div class="navbar-item">
-        <ul class="f32">
-          <% alternate_locales do |locale| %>
-            <%= link_to root_path(locale: locale) do %>
-              <%= flag(locale == :en ? :us : locale, :selected => true) %>
-            <% end %>
-          <% end %>
-        </ul>
-      </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p class="has-text-white">
+        &copy; 2019 &ndash; 2020
+      </p>
     </div>
-  </div>
-</nav>
-
-<%= yield %>
-
+  </footer>
 </body>
 </html>

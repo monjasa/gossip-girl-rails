@@ -63,6 +63,8 @@ ru:
       delete_confirm: "Ты действительно хочешь стереть этот комментарий?"
     form:
       submit: "Оставить комментарий"
+    edit:
+      title: "Редактирование комментария"
   datetime:
     ago: "назад"
     distance_in_words:

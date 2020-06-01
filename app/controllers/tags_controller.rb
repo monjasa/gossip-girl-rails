@@ -14,7 +14,7 @@ class TagsController < ApplicationController
   # GET /tags/1.json
   def show
     @tags = Tag.all.order('created_at ASC')
-    @gossips = Gossip.where('tag_id = ?', @tag.id)
+    @gossips = Gossip.where('tag_id = ?', @tag.id).order('created_at DESC')
 
     @users = User.where.not('confirmed_at' => nil)
   end

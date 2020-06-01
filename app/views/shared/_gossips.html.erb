@@ -17,7 +17,7 @@
               <%= time_ago_in_words(gossip.created_at) %> <%= t 'datetime.ago' %> <%= t '.in' %> <%= link_to gossip.tag.name, gossip.tag %>
             </small>
           </div>
-          <p><%= gossip.message %></p>
+          <p><%= truncate(gossip, 200) %></p>
         </div>
 
         <nav class="level is-mobile">

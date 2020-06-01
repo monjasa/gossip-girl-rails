@@ -2,6 +2,7 @@ class GossipsController < ApplicationController
   before_action :set_gossip, only: [:show, :edit, :update, :destroy]
   before_action :set_tags, only: [:index, :show, :new, :edit]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_editor!, only: [:edit, :update, :destroy]
 
   # GET /gossips
   # GET /gossips.json
@@ -69,6 +70,13 @@ class GossipsController < ApplicationController
   end
 
   private
+
+    def authenticate_editor!
+      unless helpers.is_author?(@gossip) || helpers.has_role?(:admin)
+        redirect_to gossip_path
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_gossip
       @gossip = Gossip.find(params[:id])

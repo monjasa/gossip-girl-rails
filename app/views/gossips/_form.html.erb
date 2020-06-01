@@ -13,9 +13,10 @@
   <div class="field">
     <label class="label"><%= t '.tag_prompt' %></label>
     <div class="control has-icons-left">
-      <div class="select is-info">
+      <div class="select is-info is-fullwidth-mobile">
         <%= f.input_field :tag_id,
                           collection: @tags.map { |tag| [tag.name, tag.id] },
+                          class: "is-fullwidth-mobile",
                           include_blank: false,
                           include_hidden: false
         %>

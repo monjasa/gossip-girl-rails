@@ -23,12 +23,12 @@
         <nav class="level is-mobile">
           <div class="level-left is-mobile">
             <% if gossip.comments.any? %>
-              <%= link_to gossip, :class => "mr10" do %>
+              <%= link_to gossip_path(gossip, anchor: "gossip-comments-title"), :class => "mr10" do %>
                 <i class="fa fa-comment" aria-hidden="true"></i>
                 <span class="has-text-info mr30"><%= gossip.comments.count %></span>
               <% end %>
             <% else %>
-              <%= link_to gossip, :class => "mr30" do %>
+              <%= link_to gossip_path(gossip, anchor: "gossip-comments-title"), :class => "mr30" do %>
                 <i class="fa fa-comment-o" aria-hidden="true"></i>
               <% end %>
             <% end %>

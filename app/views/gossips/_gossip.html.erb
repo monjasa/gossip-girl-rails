@@ -1,4 +1,4 @@
-<div class="column is-half">
+<div id="gossip" class="column is-half">
 
   <h3 class="title is-3"><%= t '.gossip_title' %> &ndash; <%= link_to gossip.tag.name, gossip.tag %></h3>
   <h3 class="subtitle is-4 has-text-grey"><%= t '.gossip_by' %> <%= at_username gossip.user %></h3>
@@ -53,12 +53,14 @@
     <%= render gossip.comments %>
   </div>
 
-  <h4 class="title is-4 pt70"><%= t '.new_comment' %></h4>
-  <% if user_signed_in? %>
-    <%= render 'comments/form' %>
-  <% else %>
-    <p><%= t '.sign_in_hint' %> <%= link_to t('.sign_in_prompt'), new_user_session_path %>. <%= t '.sign_up_hint' %>
-      <%= link_to t('.sign_up_prompt'), new_user_registration_path %>!</p>
-  <% end %>
+  <div id="comments-form" class="container">
+    <h4 class="title is-4 pt70"><%= t '.new_comment' %></h4>
+    <% if user_signed_in? %>
+      <%= render 'comments/form' %>
+    <% else %>
+      <p><%= t '.sign_in_hint' %> <%= link_to t('.sign_in_prompt'), new_user_session_path %>. <%= t '.sign_up_hint' %>
+        <%= link_to t('.sign_up_prompt'), new_user_registration_path %>!</p>
+    <% end %>
+  </div>
 
 </div>

@@ -4,7 +4,7 @@ module GossipsHelper
     @message = gossip.message
 
     if @message.length > max
-      "#{@message[0...max]} #{link_to '...', gossip, class: 'has-text-weight-bold'}".html_safe
+      "#{@message[0...max]} #{link_to '...', gossip_path(gossip, anchor: "gossip"), class: 'has-text-weight-bold'}".html_safe
     else
       @message
     end
